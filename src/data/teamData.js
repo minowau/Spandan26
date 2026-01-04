@@ -86,7 +86,7 @@ export const teamData = {
       role: 'Sports Secretary',
       contact: '+91 98765 43210',
       email: 'sports@iiitb.ac.in',
-      photo: '/images/Team/svn.png' // or './photos/rajesh.jpg'
+      photo: '/images/Team/sathvik.jpg' // or './photos/rajesh.jpg'
     },
     {
       id: 14,
