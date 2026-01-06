@@ -109,7 +109,9 @@ export const sportsData = [
     ],
     teamSize: 'Individual/Team',
     format: 'Heats + Finals',
-    registerLink: 'https://forms.google.com/athletics'
+    registerLink: 'https://forms.google.com/athletics',
+    spocDetails: 'Rajesh Kumar (+91 98765 43210)',
+    rulesLink: 'https://example.com/athletics-rules.pdf'
   },
   {
     id: 'chess',

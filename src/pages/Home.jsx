@@ -6,7 +6,14 @@ import { useEffect, useState } from 'react';
 const Home = () => {
   const navigate = useNavigate();
   const [particles, setParticles] = useState([]);
+  const eventDate = new Date('2026-01-23T00:00:00');
 
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
   const featuredSports = sportsData.slice(0, 6);
 
   useEffect(() => {
@@ -18,6 +25,27 @@ const Home = () => {
       size: Math.random() * 4 + 2,
     }));
     setParticles(newParticles);
+  }, []);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const now = new Date();
+      const diff = eventDate - now;
+
+      if (diff <= 0) {
+        clearInterval(timer);
+        return;
+      }
+
+      setTimeLeft({
+        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((diff / (1000 * 60)) % 60),
+        seconds: Math.floor((diff / 1000) % 60),
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
   }, []);
 
   return (
@@ -45,38 +73,75 @@ const Home = () => {
           <div className="absolute bottom-20 right-1/3 w-44 h-44 bg-green-500 rounded-full opacity-20 blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
         </div>
 
-        <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
-          <div className="mb-8 flex justify-center gap-4">
-            <Trophy className="w-16 h-16 text-yellow-400 animate-bounce-slow" />
-            <Flame className="w-16 h-16 text-orange-500 animate-float" />
-            <Star className="w-16 h-16 text-blue-400 animate-bounce-slow" style={{ animationDelay: '1s' }} />
+        <div className="relative z-10 w-full px-4 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Left Side - Main Content */}
+            <div className="text-center md:text-left">
+              <div className="mb-8 flex justify-center md:justify-start gap-4">
+                <Trophy className="w-16 h-16 text-yellow-400 animate-bounce-slow" />
+                <Flame className="w-16 h-16 text-orange-500 animate-float" />
+                <Star className="w-16 h-16 text-blue-400 animate-bounce-slow" style={{ animationDelay: '1s' }} />
+              </div>
+
+              <h1 className="text-6xl md:text-8xl font-extrabold mb-6 animate-zoom-in bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent drop-shadow-2xl">
+                SPANDAN 2026
+              </h1>
+
+              <div className="glass-morphism inline-block px-8 py-3 rounded-full mb-6 animate-slide-up">
+                <p className="text-xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+                  OLYMPIC SPIRIT • ELITE COMPETITION
+                </p>
+              </div>
+
+              <p className="text-lg md:text-xl mb-8 flex items-center justify-center md:justify-start gap-3 animate-slide-up">
+                <Calendar className="w-8 h-8 text-yellow-400" />
+                <span className="font-bold">January 23, 2026 • 12:00 AM</span>
+              </p>
+
+              <div className="flex justify-center md:justify-start gap-4 mt-6 animate-slide-up flex-wrap">
+                {[
+                  { label: 'DAYS', value: timeLeft.days },
+                  { label: 'HOURS', value: timeLeft.hours },
+                  { label: 'MIN', value: timeLeft.minutes },
+                  { label: 'SEC', value: timeLeft.seconds },
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    className="glass-morphism px-5 py-3 rounded-2xl text-center shadow-xl"
+                  >
+                    <p className="text-2xl md:text-3xl font-black text-yellow-400">
+                      {String(item.value).padStart(2, '0')}
+                    </p>
+                    <p className="text-xs font-bold tracking-widest text-gray-200">
+                      {item.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <p className="text-base md:text-lg mb-12 max-w-2xl mx-auto md:mx-0 leading-relaxed animate-slide-up mt-8">
+                Experience the pinnacle of collegiate sports excellence. Where champions rise, legends are born, and glory awaits.
+              </p>
+
+              <button
+                onClick={() => navigate('/sports')}
+                className="olympic-gold text-gray-900 px-12 py-5 rounded-full text-xl font-black hover:scale-110 transition-all transform shadow-2xl neon-glow animate-olympic-pulse"
+              >
+                ENTER THE ARENA
+              </button>
+            </div>
+
+            {/* Right Side - Logo */}
+            <div className="flex items-center justify-center">
+              <div className="animate-float">
+                <img 
+                  src="/images/Spandan_logo.svg" 
+                  alt="Spandan Logo" 
+                  className="w-full max-w-md md:max-w-lg drop-shadow-2xl"
+                />
+              </div>
+            </div>
           </div>
-
-          <h1 className="text-7xl md:text-9xl font-extrabold mb-6 animate-zoom-in bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent drop-shadow-2xl">
-            SPANDAN 2026
-          </h1>
-
-          <div className="glass-morphism inline-block px-8 py-3 rounded-full mb-6 animate-slide-up">
-            <p className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
-              OLYMPIC SPIRIT • ELITE COMPETITION
-            </p>
-          </div>
-
-          <p className="text-xl md:text-2xl mb-8 flex items-center justify-center gap-3 animate-slide-up">
-            <Calendar className="w-8 h-8 text-yellow-400" />
-            <span className="font-bold">March 15-20, 2026</span>
-          </p>
-
-          <p className="text-lg md:text-xl mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up">
-            Experience the pinnacle of collegiate sports excellence. Where champions rise, legends are born, and glory awaits.
-          </p>
-
-          <button
-            onClick={() => navigate('/sports')}
-            className="olympic-gold text-gray-900 px-12 py-5 rounded-full text-xl font-black hover:scale-110 transition-all transform shadow-2xl neon-glow animate-olympic-pulse"
-          >
-            ENTER THE ARENA
-          </button>
         </div>
       </section>
 

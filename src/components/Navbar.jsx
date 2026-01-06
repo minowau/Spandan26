@@ -1,5 +1,5 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Menu, X, Trophy } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 const Navbar = () => {
@@ -34,7 +34,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           <Link to="/" className="flex items-center space-x-3 group">
-            <Trophy className="w-10 h-10 text-yellow-400 animate-olympic-pulse" />
+            <img
+              src="/images/Spandan_logo.svg"
+              alt="Spandan Logo"
+              className="w-10 h-10 object-contain animate-olympic-pulse"
+            />
             <div className="flex items-center gap-2">
               <span className="text-4xl font-black bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
                 SPANDAN

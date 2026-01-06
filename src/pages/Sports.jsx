@@ -90,9 +90,9 @@ const Sports = () => {
                         <div className="p-2 bg-yellow-500 rounded-lg">
                           <Trophy className="w-6 h-6 text-gray-900" />
                         </div>
-                        <h3 className="font-black text-xl text-yellow-400">FORMAT</h3>
+                        <h3 className="font-black text-xl text-yellow-400">SPOC DETAILS</h3>
                       </div>
-                      <p className="text-white text-lg font-bold">{sport.format}</p>
+                      <p className="text-white text-lg font-bold">{sport.spocDetails || 'To be announced'}</p>
                     </div>
                   </div>
 
@@ -112,6 +112,16 @@ const Sports = () => {
                         </li>
                       ))}
                     </ul>
+                    {sport.rulesLink && (
+                      <a
+                        href={sport.rulesLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-6 inline-block px-6 py-3 bg-yellow-400 text-gray-900 font-black rounded-full shadow-lg hover:bg-yellow-500 transition-all"
+                      >
+                        Click Here for <span className="font-extrabold">COMPLETE RULES</span>
+                      </a>
+                    )}
                   </div>
 
                   <a

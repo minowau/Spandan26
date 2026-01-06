@@ -1,82 +1,69 @@
+// import type { TeamData } from '../types/team';
+
 export const teamData = {
   coreCommittee: [
     {
       id: 1,
-      name: 'Rajesh Kumar',
+      name: 'Bharat Kumar',
       role: 'Sports Secretary',
-      contact: '+91 98765 43210',
-      email: 'sports@iiitb.ac.in'
+      contact: '+91 8824119467',
+      email: 'Bharat.Kumar@iiitb.ac.in',
+      photo: '/images/Team/Bharat Kumar.JPG',
+      instagram: 'https://instagram.com/bharatkumar_dd'
     },
     {
       id: 2,
-      name: 'Priya Sharma',
-      role: 'Vice Secretary',
-      contact: '+91 98765 43211',
-      email: 'priya.sports@iiitb.ac.in'
+      name: 'Tarun R S',
+      role: 'Vice Sports Secretary',
+      contact: '+91 8147691596',
+      email: 'RS.Tarun@iiitb.ac.in',
+      photo: '/images/Team/Tarun.jpeg',
+      instagram: 'https://instagram.com/tarun_rs05'
     },
     {
       id: 3,
-      name: 'Arjun Mehta',
-      role: 'Event Manager',
-      contact: '+91 98765 43212',
-      email: 'arjun.events@iiitb.ac.in'
+      name: 'Utkarsh Goyal',
+      role: 'Events & Operations Head',
+      contact: '+91 9063257938',
+      email: 'utkarsh.goyal@iiitb.ac.in',
+      photo: '/images/Team/Utkarsh.jpg',
+      instagram: 'https://instagram.com/utkarshgoyal24'
     },
     {
       id: 4,
-      name: 'Sneha Reddy',
-      role: 'Logistics Head',
-      contact: '+91 98765 43213',
-      email: 'sneha.logistics@iiitb.ac.in'
-    }
-  ],
-  sportsCoordinators: [
+      name: 'Mithilesh Sai Yechuri',
+      role: 'Logistics & Ground Management',
+      contact: '+91 9591544183',
+      email: 'mithilesh.sai@iiitb.ac.in',
+      photo: '/images/Team/Mithilesh.jpeg',
+      instagram: 'https://instagram.com/mithileshyechurii'
+    },
     {
       id: 5,
-      name: 'Vikram Singh',
-      role: 'Cricket Coordinator',
-      sport: 'Cricket'
+      name: 'Thapan Komaravelly',
+      role: 'Registrations & Coordination',
+      contact: '+91 8074196703',
+      email: 'thapankomaravelly@iiitb.ac.in',
+      photo: '/images/Team/thapan.jpg',
+      instagram: 'https://instagram.com/thapan212'
     },
     {
       id: 6,
-      name: 'Ananya Desai',
-      role: 'Football Coordinator',
-      sport: 'Football'
+      name: 'Kirti Nigam',
+      role: 'Public Relations & Outreach',
+      contact: '+91 9743571374',
+      email: 'kirti.nigam@iiitb.ac.in',
+      photo: '/images/Team/Kirti Nigam.jpeg',
+      instagram: 'https://instagram.com/kirti_nigam_'
     },
     {
       id: 7,
-      name: 'Karthik Iyer',
-      role: 'Basketball Coordinator',
-      sport: 'Basketball'
-    },
-    {
-      id: 8,
-      name: 'Meera Patel',
-      role: 'Volleyball Coordinator',
-      sport: 'Volleyball'
-    },
-    {
-      id: 9,
-      name: 'Rohit Verma',
-      role: 'Badminton Coordinator',
-      sport: 'Badminton'
-    },
-    {
-      id: 10,
-      name: 'Divya Nair',
-      role: 'Table Tennis Coordinator',
-      sport: 'Table Tennis'
-    },
-    {
-      id: 11,
-      name: 'Aditya Gupta',
-      role: 'Athletics Coordinator',
-      sport: 'Athletics'
-    },
-    {
-      id: 12,
-      name: 'Kavya Krishnan',
-      role: 'Chess Coordinator',
-      sport: 'Chess'
+      name: 'Vini Singh Rajput',
+      role: 'Media & Design',
+      contact: '+91 8287666133',
+      email: 'vini.rajput@iiitb.ac.in',
+      photo: '/images/Team/Vinnie.jpeg',
+      instagram: 'https://instagram.com/vinisingh_'
     }
   ],
   webTeam: [
@@ -86,13 +73,8 @@ export const teamData = {
       role: 'Sports Secretary',
       contact: '+91 98765 43210',
       email: 'sports@iiitb.ac.in',
-      photo: '/images/Team/sathvik.jpg' // or './photos/rajesh.jpg'
-    },
-    {
-      id: 14,
-      name: 'Design Team',
-      role: 'UI/UX Design',
-      contact: 'design@iiitb.ac.in'
+      photo: '/images/Team/sathvik.jpg',
+      instagram: 'https://instagram.com/svnsaisathvik'
     }
   ]
 };
