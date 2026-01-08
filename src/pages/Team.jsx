@@ -126,12 +126,12 @@ const Team = () => {
                             </div>
                             <span className="text-gray-300 font-semibold">{member.contact}</span>
                           </div>
-                          <div className="glass-morphism rounded-lg p-4 flex items-center gap-4">
-                            <div className="p-2 bg-orange-500 rounded-lg">
-                              <Mail className="w-4 h-4 text-white" />
+                            <div className="glass-morphism rounded-lg p-4 flex items-center gap-4">
+                              <div className="p-2 bg-orange-500 rounded-lg">
+                                <Mail className="w-4 h-4 text-white" />
+                              </div>
+                              <span className="text-gray-300 font-semibold break-all">{member.email}</span>
                             </div>
-                            <span className="text-gray-300 font-semibold break-all">{member.email}</span>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -150,11 +150,11 @@ const Team = () => {
                   <div className="w-32 h-1 bg-gradient-to-r from-green-400 to-emerald-500 mx-auto"></div>
                 </div>
 
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 perspective-1000">
+                <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-12 perspective-1000">
                   {teamData.webTeam.map((member) => (
                     <div
                       key={member.id}
-                      className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl p-8 border-2 border-green-400/50 hover:border-green-400 transition-all relative"
+                      className="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl shadow-2xl p-10 min-h-[460px] border-2 border-green-400/50 hover:border-green-400 transition-transform duration-500 hover:scale-[1.04] hover:-translate-y-2 relative"
                     >
                       <div className="absolute top-0 right-0 p-3">
                         <Star className="w-6 h-6 text-green-400 animate-olympic-pulse" />
@@ -163,8 +163,8 @@ const Team = () => {
                       <div className="absolute inset-0 bg-gradient-to-br from-green-400/0 to-emerald-500/0 hover:from-green-400/10 hover:to-emerald-500/10 transition-all"></div>
 
                       <div className="relative z-10">
-                        <div className="relative w-32 h-32 mx-auto mb-6 group">
-                          <div className="w-32 h-32 olympic-bronze rounded-full flex items-center justify-center text-gray-900 text-4xl font-black overflow-hidden shadow-2xl border-4 border-white">
+                        <div className="relative w-40 h-40 mx-auto mb-8">
+                          <div className="w-40 h-40 olympic-bronze rounded-full flex items-center justify-center text-gray-900 text-4xl font-black overflow-hidden shadow-2xl border-4 border-white">
                             {member.photo ? (
                               <img
                                 src={member.photo}
@@ -190,14 +190,30 @@ const Team = () => {
                           {member.name.toUpperCase()}
                         </h3>
 
-                        {member.contact && (
-                          <div className="glass-morphism rounded-lg p-3 flex items-center justify-center gap-3">
-                            <div className="p-2 bg-green-500 rounded-lg">
-                              <Mail className="w-4 h-4 text-white" />
+                        <div className="space-y-3 text-sm">
+                          {member.contact && (
+                            <div className="glass-morphism rounded-xl p-4 flex items-center gap-4">
+                              <div className="p-2 bg-blue-500 rounded-lg">
+                                <Phone className="w-4 h-4 text-white" />
+                              </div>
+                              <span className="text-gray-300 font-semibold">
+                                {member.contact}
+                              </span>
                             </div>
-                            <span className="text-gray-300 font-semibold">{member.contact}</span>
-                          </div>
-                        )}
+                          )}
+
+                          {member.email && (
+                            <div className="glass-morphism rounded-lg p-4 flex items-center gap-4">
+                              <div className="p-2 bg-orange-500 rounded-lg">
+                                <Mail className="w-4 h-4 text-white" />
+                              </div>
+                              <span className="text-gray-300 font-semibold break-all">
+                                {member.email}
+                              </span>
+                            </div>
+                          )}
+                        </div>
+
                       </div>
                     </div>
                   ))}

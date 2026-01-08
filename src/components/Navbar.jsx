@@ -69,20 +69,16 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* <div className="flex items-center gap-4">
-            <img
-              src="/images/IIITB_Logo.png"
-              alt="IIITB Logo"
-              className="h-16 w-auto transition-transform hover:scale-110"
-              style={{ maxHeight: '64px', aspectRatio: 'auto 4/3' }}
-            />
+          <div className="md:hidden">
             <button
-              className="md:hidden text-white hover:text-yellow-400 transition-colors"
+              className="text-white hover:text-yellow-400 transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
             </button>
-          </div> */}
+          </div>
+
         </div>
       </div>
 

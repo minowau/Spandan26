@@ -40,7 +40,7 @@ export const teamData = {
     },
     {
       id: 5,
-      name: 'Thapan Komaravelly',
+      name: 'Thapan',
       role: 'Registrations & Coordination',
       contact: '+91 8074196703',
       email: 'thapankomaravelly@iiitb.ac.in',
