@@ -87,7 +87,26 @@ const App = () => {
 
   return (
     <div className="min-h-screen">
-      <section className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-black text-white min-h-screen flex items-center justify-center overflow-hidden pb-24 sm:pb-32 md:pb-0">
+      <style>{`
+        @keyframes scroll-left {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+
+        @keyframes scroll-right {
+          0% { transform: translateX(-50%); }
+          100% { transform: translateX(0); }
+        }
+
+        .animate-scroll-left {
+          animation: scroll-left 25s linear infinite;
+        }
+
+        .animate-scroll-right {
+          animation: scroll-right 25s linear infinite;
+        }
+      `}</style>
+      <section className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-black text-white min-h-screen flex items-center justify-center overflow-hidden pb-24 sm:pb-32 md:pb-0 pt-24 sm:pt-28 md:pt-32">
         <div className="particle-bg">
           {particles.map((particle) => (
             <div
@@ -110,9 +129,9 @@ const App = () => {
           <div className="absolute bottom-20 right-1/3 w-44 h-44 bg-green-500 rounded-full opacity-20 blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
         </div>
 
-        <div className="relative z-10 w-full px-4 max-w-7xl mx-auto pt-24 sm:pt-28 md:pt-0">
+        <div className="relative z-10 w-full px-4 max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="flex items-center justify-center md:order-2 mt-6 sm:mt-10 md:mt-0">
+            <div className="flex items-center justify-center md:order-2">
               <div className="animate-float">
                 <img
                   src="/images/Spandan_logo.svg"
@@ -135,7 +154,7 @@ const App = () => {
 
               <div className="glass-morphism inline-block px-4 sm:px-6 md:px-8 py-2 md:py-3 rounded-full mb-4 md:mb-6 animate-slide-up">
                 <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
-                  OLYMPIC SPIRIT • ELITE COMPETITION
+                  INTRA COLLEGE • SPORTS FEST • IIIT BANGALORE
                 </p>
               </div>
 
@@ -217,60 +236,47 @@ const App = () => {
             </p>
           </div>
 
-          <div className="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
-            <div className="relative h-64 sm:h-80 md:h-96 lg:h-[32rem] w-full overflow-hidden bg-gray-900">
-              {glimpseImages.map((image, index) => (
-                <div
-                  key={index}
-                  className={`absolute inset-0 transition-opacity duration-1000 ${
-                    index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                  }`}
-                >
-                  <img
-                    src={image}
-                    alt={`Spandan Glimpse ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                </div>
-              ))}
-            </div>
+          <div className="relative overflow-hidden py-8 space-y-8">
 
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
-              {glimpseImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === currentImageIndex
-                      ? 'bg-yellow-400 w-8'
-                      : 'bg-white/50 hover:bg-white/80'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
-
-            <button
-              onClick={() => goToSlide((currentImageIndex - 1 + glimpseImages.length) % glimpseImages.length)}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full p-2 sm:p-3 transition-all"
-              aria-label="Previous slide"
+        {/* ROW 1 */}
+        <div className="flex gap-4 md:gap-6 animate-scroll-left">
+          {[...glimpseImages.slice(0, 10), ...glimpseImages.slice(0, 10)].map((image, index) => (
+            <div
+              key={`row1-${index}`}
+              className="group relative flex-shrink-0 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-xl md:rounded-2xl overflow-hidden shadow-xl cursor-pointer"
             >
-              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
+              <img
+                src={image}
+                alt={`Spandan Glimpse ${index + 1}`}
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+            </div>
+          ))}
+        </div>
 
-            <button
-              onClick={() => goToSlide((currentImageIndex + 1) % glimpseImages.length)}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full p-2 sm:p-3 transition-all"
-              aria-label="Next slide"
+        {/* ROW 2 */}
+        <div className="flex gap-4 md:gap-6 animate-scroll-right">
+          {[...glimpseImages.slice(10, 20), ...glimpseImages.slice(10, 20)].map((image, index) => (
+            <div
+              key={`row2-${index}`}
+              className="group relative flex-shrink-0 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-xl md:rounded-2xl overflow-hidden shadow-xl cursor-pointer"
             >
-              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
+              <img
+                src={image}
+                alt={`Spandan Glimpse ${index + 11}`}
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+            </div>
+          ))}
+        </div>
+
+        {/* fade edges */}
+        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+      </div>
+
         </div>
       </section>
       <section className="py-16 sm:py-20 md:py-24 px-4 bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white relative overflow-hidden">

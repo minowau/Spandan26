@@ -212,7 +212,7 @@ const Sports = () => {
         </div>
 
         {/* Footer CTA */}
-        <div className="mt-20 relative overflow-hidden rounded-3xl">
+        {/* <div className="mt-20 relative overflow-hidden rounded-3xl">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-yellow-600 to-red-600 opacity-90"></div>
           <div className="absolute inset-0">
             <div className="absolute top-0 left-1/4 w-64 h-64 bg-white rounded-full opacity-10 blur-3xl"></div>
@@ -230,7 +230,7 @@ const Sports = () => {
               Questions? Contact the Sports Secretary at sports@iiitb.ac.in
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
