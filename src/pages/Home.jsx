@@ -135,7 +135,7 @@ const App = () => {
           animation: scroll-right 25s linear infinite;
         }
       `}</style>
-      <section className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-black text-white min-h-screen flex items-center justify-center overflow-hidden pb-24 sm:pb-32 md:pb-0 pt-24 sm:pt-28 md:pt-32">
+      <section className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-black text-white min-h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-28 md:pt-32 pb-32 sm:pb-40 md:pb-20">
         <div className="particle-bg">
           {particles.map((particle) => (
             <div
@@ -219,7 +219,7 @@ const App = () => {
 
               <button
                 onClick={() => navigate('/sports')}
-                className="olympic-gold text-gray-900 px-8 sm:px-10 md:px-12 py-3 sm:py-4 md:py-5 rounded-full text-base sm:text-lg md:text-xl font-black hover:scale-110 transition-all transform shadow-2xl neon-glow animate-olympic-pulse"
+                className="olympic-gold text-gray-900 px-8 sm:px-10 md:px-12 py-3 sm:py-4 md:py-5 rounded-full text-base sm:text-lg md:text-xl font-black hover:scale-110 transition-all transform shadow-2xl neon-glow animate-olympic-pulse mb-16 sm:mb-20 md:mb-0"
               >
                 ENTER THE ARENA
               </button>

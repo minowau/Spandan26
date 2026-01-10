@@ -88,6 +88,13 @@
                 0 0 60px rgba(255, 140, 0, 0.2);
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    .animate-olympic-pulse {
+      animation: none;
+    }
+  }
+
+
   @keyframes fadeIn {
     from {
       opacity: 0;
