@@ -17,6 +17,13 @@ const App = () => {
     minutes: 0,
     seconds: 0,
   });
+  // Controls when glimpse animations start
+  const [glimpsesActive, setGlimpsesActive] = useState(false);
+
+  // Row-level image loading (prevents excessive re-renders)
+  const [row1Loaded, setRow1Loaded] = useState(false);
+  const [row2Loaded, setRow2Loaded] = useState(false);
+
 
   const glimpseImages = [
     '/images/spandan/glimpse-1.jpg',
@@ -82,6 +89,26 @@ const App = () => {
 
     return () => clearInterval(slideTimer);
   }, []);
+
+  useEffect(() => {
+  const section = document.getElementById('glimpses-section');
+  if (!section) return;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        setGlimpsesActive(true);
+        observer.disconnect(); // load once only
+      }
+    },
+    { rootMargin: '200px' } // preload before visible
+  );
+
+  observer.observe(section);
+
+  return () => observer.disconnect();
+}, []);
+
 
   const goToSlide = (index) => {
     setCurrentImageIndex(index);
@@ -228,7 +255,7 @@ const App = () => {
             </p>
           </div>
 
-          <div className="text-center mb-12 md:mb-16">
+         <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 md:mb-4 bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 bg-clip-text text-transparent px-2">
               GLIMPSES OF SPANDAN
             </h2>
@@ -238,66 +265,76 @@ const App = () => {
             </p>
           </div>
 
-          <div className="relative overflow-hidden py-8 space-y-8">
+          {/* FIX 1: Add ID to section for IntersectionObserver */}
+          <div id="glimpses-section" className="relative overflow-hidden py-8 space-y-8">
 
-        {/* ROW 1 */}
-        <div className="flex gap-4 md:gap-6 animate-scroll-left">
-          {[...glimpseImages.slice(0, 10), ...glimpseImages.slice(0, 10)].map((image, index) => (
-            <div
-              key={`row1-${index}`}
-              className="group relative flex-shrink-0 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-xl md:rounded-2xl overflow-hidden shadow-xl cursor-pointer bg-gray-800"
-            >
-              {!imagesLoaded[`row1-${index}`] && (
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+            {/* ROW 1 - FIX 1: Animation only when active */}
+            <div className={`flex gap-4 md:gap-6 ${glimpsesActive ? 'animate-scroll-left' : ''}`}>
+              {[...glimpseImages.slice(0, 10), ...glimpseImages.slice(0, 10)].map((image, index) => (
+                <div
+                  key={`row1-${index}`}
+                  className="group relative flex-shrink-0 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-xl md:rounded-2xl overflow-hidden shadow-xl cursor-pointer bg-gray-800"
+                >
+                  {/* FIX 3: Row-level loading indicator */}
+                  {!row1Loaded && (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+                    </div>
+                  )}
+                  {/* FIX 2: async decoding + fetchpriority */}
+                  <img
+                    src={image}
+                    alt={`Spandan Glimpse ${index + 1}`}
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="low"
+                    onLoad={() => setRow1Loaded(true)}
+                    className={`w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out ${
+                      row1Loaded ? 'opacity-100' : 'opacity-0'
+                    }`}
+                    style={{ transition: 'opacity 0.3s ease-in-out, transform 0.5s ease-out' }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
                 </div>
-              )}
-              <img
-                src={image}
-                alt={`Spandan Glimpse ${index + 1}`}
-                loading="lazy"
-                onLoad={() => setImagesLoaded(prev => ({ ...prev, [`row1-${index}`]: true }))}
-                className={`w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out ${
-                  imagesLoaded[`row1-${index}`] ? 'opacity-100' : 'opacity-0'
-                }`}
-                style={{ transition: 'opacity 0.3s ease-in-out, transform 0.5s ease-out' }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+              ))}
             </div>
-          ))}
-        </div>
 
-        {/* ROW 2 */}
-        <div className="flex gap-4 md:gap-6 animate-scroll-right">
-          {[...glimpseImages.slice(10, 20), ...glimpseImages.slice(10, 20)].map((image, index) => (
-            <div
-              key={`row2-${index}`}
-              className="group relative flex-shrink-0 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-xl md:rounded-2xl overflow-hidden shadow-xl cursor-pointer bg-gray-800"
-            >
-              {!imagesLoaded[`row2-${index}`] && (
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-12 h-12 border-4 border-yellow-500 border-t-transparent rounded-full animate-spin"></div>
+            {/* ROW 2 - FIX 1: Animation only when active */}
+            <div className={`flex gap-4 md:gap-6 ${glimpsesActive ? 'animate-scroll-right' : ''}`}>
+              {[...glimpseImages.slice(10, 20), ...glimpseImages.slice(10, 20)].map((image, index) => (
+                <div
+                  key={`row2-${index}`}
+                  className="group relative flex-shrink-0 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-xl md:rounded-2xl overflow-hidden shadow-xl cursor-pointer bg-gray-800"
+                >
+                  {/* FIX 3: Row-level loading indicator */}
+                  {!row2Loaded && (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-12 h-12 border-4 border-yellow-500 border-t-transparent rounded-full animate-spin"></div>
+                    </div>
+                  )}
+                  {/* FIX 2: async decoding + fetchpriority */}
+                  <img
+                    src={image}
+                    alt={`Spandan Glimpse ${index + 11}`}
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="low"
+                    onLoad={() => setRow2Loaded(true)}
+                    className={`w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out ${
+                      row2Loaded ? 'opacity-100' : 'opacity-0'
+                    }`}
+                    style={{ transition: 'opacity 0.3s ease-in-out, transform 0.5s ease-out' }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
                 </div>
-              )}
-              <img
-                src={image}
-                alt={`Spandan Glimpse ${index + 11}`}
-                loading="lazy"
-                onLoad={() => setImagesLoaded(prev => ({ ...prev, [`row2-${index}`]: true }))}
-                className={`w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out ${
-                  imagesLoaded[`row2-${index}`] ? 'opacity-100' : 'opacity-0'
-                }`}
-                style={{ transition: 'opacity 0.3s ease-in-out, transform 0.5s ease-out' }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+              ))}
             </div>
-          ))}
-        </div>
 
-        {/* fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
-      </div>
+            {/* fade edges */}
+            <div className="absolute left-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+          </div>
+
 
         </div>
       </section>
