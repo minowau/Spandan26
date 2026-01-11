@@ -254,7 +254,49 @@ const App = () => {
               where champions are born, and where every moment becomes a memory worth cherishing.
             </p>
           </div>
-
+          <style>{`
+            @keyframes scroll-left {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            @keyframes scroll-right {
+              0% { transform: translateX(-50%); }
+              100% { transform: translateX(0); }
+            }
+            .animate-scroll-left {
+              animation: scroll-left 12s linear infinite;
+            }
+            .animate-scroll-right {
+              animation: scroll-right 12s linear infinite;
+            }
+          `}</style>
+          {/* Animated Glimpses Title */}
+          <div className="text-center mb-10 md:mb-14">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 md:mb-4 bg-gradient-to-r from-blue-600 via-red-600 to-yellow-600 bg-clip-text text-transparent px-2">
+              GLIMPSES OF GLORY
+            </h2>
+            <div className="w-24 sm:w-28 md:w-32 h-1 bg-gradient-to-r from-blue-500 via-red-500 to-yellow-500 mx-auto"></div>
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 mt-4">
+              Relive the unforgettable moments from previous editions of Spandan
+            </p>
+          </div>
+          <style>{`
+            @keyframes scroll-left {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            @keyframes scroll-right {
+              0% { transform: translateX(-50%); }
+              100% { transform: translateX(0); }
+            }
+            .animate-scroll-left {
+              animation: scroll-left 7s linear infinite;
+            }
+            .animate-scroll-right {
+              animation: scroll-right 7s linear infinite;
+            }
+          `}</style>
+          
          <div id="glimpses-section" className="relative overflow-hidden py-8 space-y-8">
 
           {/* ROW 1 */}
