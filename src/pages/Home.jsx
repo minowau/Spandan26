@@ -255,96 +255,91 @@ const App = () => {
             </p>
           </div>
 
-         <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 md:mb-4 bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 bg-clip-text text-transparent px-2">
-              GLIMPSES OF SPANDAN
-            </h2>
-            <div className="w-24 sm:w-28 md:w-32 h-1 bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 mx-auto mb-4"></div>
-            <p className="text-base sm:text-lg md:text-xl text-gray-700">
-              Relive the unforgettable moments and legendary victories
-            </p>
+         <div id="glimpses-section" className="relative overflow-hidden py-8 space-y-8">
+
+          {/* ROW 1 */}
+          <div className={`flex gap-4 md:gap-6 ${glimpsesActive ? 'animate-scroll-left' : ''}`}>
+            {[...glimpseImages.slice(0, 10), ...glimpseImages.slice(0, 10)].map((image, index) => (
+              <div
+                key={`row1-${index}`}
+                /* REMOVED `group` since hover effects are gone */
+                className="relative flex-shrink-0 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 
+                          rounded-xl md:rounded-2xl overflow-hidden shadow-xl cursor-pointer bg-gray-800"
+              >
+                {/* Loading spinner */}
+                {!row1Loaded && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                )}
+
+                <img
+                  src={image}
+                  alt={`Spandan Glimpse ${index + 1}`}
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                  onLoad={() => setRow1Loaded(true)}
+                  className={`
+                    w-full h-full object-cover
+                    transition-opacity duration-300 ease-in-out
+                    ${row1Loaded ? 'opacity-100' : 'opacity-0'}
+                  `}
+                  /* REMOVED transform + hover scale to avoid animation conflict */
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+              </div>
+            ))}
           </div>
 
-          {/* FIX 1: Add ID to section for IntersectionObserver */}
-          <div id="glimpses-section" className="relative overflow-hidden py-8 space-y-8">
+          {/* ROW 2 */}
+          <div className={`flex gap-4 md:gap-6 ${glimpsesActive ? 'animate-scroll-right' : ''}`}>
+            {[...glimpseImages.slice(10, 20), ...glimpseImages.slice(10, 20)].map((image, index) => (
+              <div
+                key={`row2-${index}`}
+                className="relative flex-shrink-0 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 
+                          rounded-xl md:rounded-2xl overflow-hidden shadow-xl cursor-pointer bg-gray-800"
+              >
+                {!row2Loaded && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-12 h-12 border-4 border-yellow-500 border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                )}
 
-            {/* ROW 1 - FIX 1: Animation only when active */}
-            <div className={`flex gap-4 md:gap-6 ${glimpsesActive ? 'animate-scroll-left' : ''}`}>
-              {[...glimpseImages.slice(0, 10), ...glimpseImages.slice(0, 10)].map((image, index) => (
-                <div
-                  key={`row1-${index}`}
-                  className="group relative flex-shrink-0 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-xl md:rounded-2xl overflow-hidden shadow-xl cursor-pointer bg-gray-800"
-                >
-                  {/* FIX 3: Row-level loading indicator */}
-                  {!row1Loaded && (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-                    </div>
-                  )}
-                  {/* FIX 2: async decoding + fetchpriority */}
-                  <img
-                    src={image}
-                    alt={`Spandan Glimpse ${index + 1}`}
-                    loading="lazy"
-                    decoding="async"
-                    fetchpriority="low"
-                    onLoad={() => setRow1Loaded(true)}
-                    className={`w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out ${
-                      row1Loaded ? 'opacity-100' : 'opacity-0'
-                    }`}
-                    style={{ transition: 'opacity 0.3s ease-in-out, transform 0.5s ease-out' }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-                </div>
-              ))}
-            </div>
+                <img
+                  src={image}
+                  alt={`Spandan Glimpse ${index + 11}`}
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                  onLoad={() => setRow2Loaded(true)}
+                  className={`
+                    w-full h-full object-cover
+                    transition-opacity duration-300 ease-in-out
+                    ${row2Loaded ? 'opacity-100' : 'opacity-0'}
+                  `}
+                />
 
-            {/* ROW 2 - FIX 1: Animation only when active */}
-            <div className={`flex gap-4 md:gap-6 ${glimpsesActive ? 'animate-scroll-right' : ''}`}>
-              {[...glimpseImages.slice(10, 20), ...glimpseImages.slice(10, 20)].map((image, index) => (
-                <div
-                  key={`row2-${index}`}
-                  className="group relative flex-shrink-0 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-xl md:rounded-2xl overflow-hidden shadow-xl cursor-pointer bg-gray-800"
-                >
-                  {/* FIX 3: Row-level loading indicator */}
-                  {!row2Loaded && (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-12 h-12 border-4 border-yellow-500 border-t-transparent rounded-full animate-spin"></div>
-                    </div>
-                  )}
-                  {/* FIX 2: async decoding + fetchpriority */}
-                  <img
-                    src={image}
-                    alt={`Spandan Glimpse ${index + 11}`}
-                    loading="lazy"
-                    decoding="async"
-                    fetchpriority="low"
-                    onLoad={() => setRow2Loaded(true)}
-                    className={`w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out ${
-                      row2Loaded ? 'opacity-100' : 'opacity-0'
-                    }`}
-                    style={{ transition: 'opacity 0.3s ease-in-out, transform 0.5s ease-out' }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-                </div>
-              ))}
-            </div>
-
-            {/* fade edges */}
-            <div className="absolute left-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+              </div>
+            ))}
           </div>
 
-
-        </div>
-      </section>
-      <section className="py-16 sm:py-20 md:py-24 px-4 bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-600 rounded-full opacity-10 blur-3xl animate-float"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-yellow-600 rounded-full opacity-10 blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
+          {/* Fade edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
+      </div>
+    </section>
+    <section className="py-16 sm:py-20 md:py-24 px-4 bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white relative overflow-hidden">
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-600 rounded-full opacity-10 blur-3xl animate-float"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-yellow-600 rounded-full opacity-10 blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-12 md:mb-16">
             <Award className="w-16 h-16 mx-auto mb-6 text-yellow-400 animate-bounce-slow" />
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
