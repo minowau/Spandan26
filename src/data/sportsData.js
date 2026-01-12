@@ -67,7 +67,7 @@ export const sportsData = [
     id: 'cricket',
     name: 'Cricket',
     category: 'major',
-    image: 'images/Sports/Cricket.png',
+    image: 'images/Sports/Cricket.jpg',
     description: 'Action-packed cricket tournament highlighting batting, bowling, and fielding skills.',
     rules: [
       'Team size: 11 players + substitutes',
@@ -87,7 +87,7 @@ export const sportsData = [
     id: 'table-tennis',
     name: 'Table Tennis',
     category: 'major',
-    image: 'images/Sports/TableTennis.png',
+    image: 'images/Sports/TableTennis.jpg',
     description: 'Fast reflexes and sharp spins define this table tennis championship.',
     rules: [
       'Singles and Doubles categories',
@@ -148,7 +148,7 @@ export const sportsData = [
     id: 'tennis',
     name: 'Tennis',
     category: 'major',
-    image: 'images/Sports/Tennis.png',
+    image: 'images/Sports/Tennis.jpg',
     description: 'Singles tennis tournament focusing on technique, stamina, and consistency.',
     rules: [
       'Singles matches only',
@@ -167,7 +167,7 @@ export const sportsData = [
     id: 'throwball',
     name: 'Throwball',
     category: 'major',
-    image: 'images/Sports/ThrowBall.png',
+    image: 'images/Sports/ThrowBall.jpg',
     description: 'Team-based throwball matches focusing on coordination and quick reflexes.',
     rules: [
       'Team size: 7 players',
@@ -208,7 +208,7 @@ export const sportsData = [
     id: 'carrom',
     name: 'Carrom',
     category: 'minor',
-    image: 'images/Sports/Carroms.png',
+    image: 'images/Sports/Carroms.jpg',
     description: 'Precision-based indoor board game competition.',
     rules: [
       'Singles matches',
@@ -227,7 +227,7 @@ export const sportsData = [
     id: 'tug-of-war',
     name: 'Tug of War (Gym)',
     category: 'minor',
-    image: 'images/Sports/TugOfWar.png',
+    image: 'images/Sports/TugOfWar.jpg',
     description: 'Strength-based team competition testing coordination and power.',
     rules: [
       'Fixed team size',
