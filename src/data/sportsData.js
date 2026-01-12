@@ -1,8 +1,6 @@
 export const sportsData = [
   /* ===================== MAJOR SPORTS ===================== */
 
-  
-
   {
     id: 'basketball',
     name: 'Basketball',
@@ -19,8 +17,12 @@ export const sportsData = [
     teamSize: '5 players',
     format: 'League + Knockout',
     gif_image: 'images/Gifs/Basketball.gif',
-    registerLink: 'https://forms.google.com/basketball',
-    rulesLink: 'https://example.com/athletics-rules.pdf'
+    registrations: [
+      { label: 'Men’s 3v3', link: 'https://forms.gle/gN4HTLT8MWbUKq9o9' },
+      { label: 'Men’s 5v5', link: 'https://forms.gle/Xvfqdq399hU83HgX7' },
+      { label: 'Women’s 3v3', link: 'https://forms.gle/ptJbqjrbwTocCCmaA' }
+    ],
+    // rulesLink: 'https://example.com/athletics-rules.pdf'
   },
 
   {
@@ -39,8 +41,10 @@ export const sportsData = [
     teamSize: '6 players',
     format: 'League + Knockout',
     gif_image: 'images/Gifs/Volleyball.gif',
-    registerLink: 'https://forms.google.com/volleyball',
-    rulesLink: 'https://example.com/athletics-rules.pdf'
+    registrations: [
+      { label: 'Register Here', link: 'https://forms.gle/gZLCK7MDSSrAA91s7' }
+    ],
+    // rulesLink: 'https://example.com/athletics-rules.pdf'
   },
 
   {
@@ -59,8 +63,14 @@ export const sportsData = [
     teamSize: 'Singles / Doubles',
     format: 'Knockout',
     gif_image: 'images/Gifs/Badminton.gif',
-    registerLink: 'https://forms.google.com/badminton',
-    rulesLink: 'https://example.com/athletics-rules.pdf'
+    registrations: [
+      { label: 'Mens Singles', link: 'https://forms.gle/PPvyAQYo6TFf7m4ZA' },
+      { label: 'Mens Doubles', link: 'https://forms.gle/zzzWTysxyG4c4YRu6' },
+      { label: 'Womens Singles', link: 'https://forms.gle/AhS2b46znZVbMSBB7' },
+      { label: 'Womens Doubles', link: 'https://forms.gle/63TeCWoUSqaTDDXCA' },
+      { label: 'Mixed Doubles', link: 'https://forms.gle/17CU26EUbnAS93SZ7' }
+    ],
+    // rulesLink: 'https://example.com/athletics-rules.pdf'
   },
 
   {
@@ -79,8 +89,10 @@ export const sportsData = [
     teamSize: '11 players',
     format: 'League + Knockout',
     gif_image: 'images/Gifs/Cricket.gif',
-    registerLink: 'https://forms.google.com/cricket',
-    rulesLink: 'https://example.com/athletics-rules.pdf'
+    registrations: [
+      { label: 'Register Here', link: 'https://forms.gle/L9Q9mBmjm7BwTX1z8' }
+    ],
+    // rulesLink: 'https://example.com/athletics-rules.pdf'
   },
 
   {
@@ -99,10 +111,15 @@ export const sportsData = [
     teamSize: 'Singles / Doubles',
     format: 'Knockout',
     gif_image: 'images/Gifs/TableTennis.gif',
-    registerLink: 'https://forms.google.com/tabletennis',
-    rulesLink: 'https://example.com/athletics-rules.pdf'
+    registrations: [
+      { label: 'Mens Singles', link: 'https://forms.gle/cyGo2umdE1q6GKoX7' },
+      { label: 'Mens Doubles', link: 'https://forms.gle/SkNFogoZNg1PUPF9A' },
+      { label: 'Mixed Doubles', link: 'https://forms.gle/ohagYuN4SDvwDZxj7' },
+      { label: 'Womens Singles', link: 'https://forms.gle/SPGUdnDghcdeMacv6' },
+      { label: 'Womens Doubles', link: 'https://forms.gle/aMszNbqSEc4h4erH9' }
+    ],
+    // rulesLink: 'https://example.com/athletics-rules.pdf'
   },
-
 
   {
     id: 'football',
@@ -120,8 +137,10 @@ export const sportsData = [
     teamSize: '7 players',
     format: 'Knockout',
     gif_image: 'images/Gifs/Football.gif',
-    registerLink: 'https://forms.google.com/football',
-    rulesLink: 'https://example.com/athletics-rules.pdf'
+    registrations: [
+      { label: 'Register Here', link: 'https://forms.google.com/football' }
+    ],
+    // rulesLink: 'https://example.com/athletics-rules.pdf'
   },
 
   {
@@ -139,10 +158,11 @@ export const sportsData = [
     ],
     teamSize: 'Individual',
     format: 'Swiss League',
-    registerLink: 'https://forms.google.com/chess',
-    rulesLink: 'https://example.com/athletics-rules.pdf'
+    registrations: [
+      { label: 'Register Here', link: 'https://forms.office.com/r/riT4guEyUP' }
+    ],
+    // rulesLink: 'https://example.com/athletics-rules.pdf'
   },
-
 
   {
     id: 'tennis',
@@ -159,8 +179,11 @@ export const sportsData = [
     ],
     teamSize: 'Individual',
     format: 'Knockout',
-    registerLink: 'https://forms.google.com/tennis',
-    rulesLink: 'https://example.com/athletics-rules.pdf'
+    registrations: [
+      { label: 'Mens Singles', link: 'https://forms.gle/RtZ5Ef2CZ6eDwvj19' },
+      { label: 'Mens Doubles', link: 'https://forms.gle/aQqtchFj9bQMprq9A' }
+    ],
+    // rulesLink: 'https://example.com/athletics-rules.pdf'
   },
 
   {
@@ -178,10 +201,11 @@ export const sportsData = [
     ],
     teamSize: '7 players',
     format: 'League + Knockout',
-    registerLink: 'https://forms.google.com/throwball',
-    rulesLink: 'https://example.com/athletics-rules.pdf'
+    registrations: [
+      { label: 'Register Here', link: 'https://forms.google.com/throwball' }
+    ],
+    // rulesLink: 'https://example.com/athletics-rules.pdf'
   },
-
 
   /* ===================== MINOR SPORTS ===================== */
 
@@ -200,8 +224,10 @@ export const sportsData = [
     ],
     teamSize: '6 players',
     format: 'Knockout',
-    registerLink: 'https://forms.google.com/gullycricket',
-    rulesLink: 'https://example.com/athletics-rules.pdf'
+    registrations: [
+      { label: 'Register Here', link: 'https://forms.gle/Faht41q4Fdia11qa8' }
+    ],
+    // rulesLink: 'https://example.com/athletics-rules.pdf'
   },
 
   {
@@ -219,8 +245,10 @@ export const sportsData = [
     ],
     teamSize: 'Individual',
     format: 'Knockout',
-    registerLink: 'https://forms.google.com/carrom',
-    rulesLink: 'https://example.com/athletics-rules.pdf'
+    registrations: [
+      { label: 'Register Here', link: 'https://forms.gle/2pu4HxzeJoE67UpN9' }
+    ],
+    // rulesLink: 'https://example.com/athletics-rules.pdf'
   },
 
   {
@@ -238,8 +266,10 @@ export const sportsData = [
     ],
     teamSize: 'Team',
     format: 'Knockout',
-    registerLink: 'https://forms.google.com/tugofwar',
-    rulesLink: 'https://example.com/athletics-rules.pdf'
+    registrations: [
+      { label: 'Register Here', link: 'https://forms.gle/DkeoxBCcDbMxGMBn6' }
+    ],
+    // rulesLink: 'https://example.com/athletics-rules.pdf'
   },
 
   {
@@ -257,8 +287,10 @@ export const sportsData = [
     ],
     teamSize: 'Individual',
     format: 'Points Based',
-    registerLink: 'https://forms.google.com/pentathlon',
-    rulesLink: 'https://example.com/athletics-rules.pdf'
+    registrations: [
+      { label: 'Register Here', link: 'https://forms.gle/S8PYuDFbTEq4wS6p8' }
+    ],
+    // rulesLink: 'https://example.com/athletics-rules.pdf'
   },
 
   /* ===================== ESPORTS ===================== */
@@ -278,8 +310,10 @@ export const sportsData = [
     ],
     teamSize: 'Individual',
     format: 'Knockout',
-    registerLink: 'https://forms.google.com/clashroyale',
-    rulesLink: 'https://example.com/athletics-rules.pdf'
+    registrations: [
+      { label: 'Register Here', link: 'https://forms.gle/9ij6oaX1f8KnkpMa6' }
+    ],
+    // rulesLink: 'https://example.com/athletics-rules.pdf'
   },
 
   {
@@ -297,8 +331,10 @@ export const sportsData = [
     ],
     teamSize: 'Individual',
     format: 'League',
-    registerLink: 'https://forms.google.com/smashkarts',
-    rulesLink: 'https://example.com/athletics-rules.pdf'
+    registrations: [
+      { label: 'Register Here', link: 'https://forms.gle/p4dnCZLJshSjhErPA' }
+    ],
+    // rulesLink: 'https://example.com/athletics-rules.pdf'
   },
 
   {
@@ -316,8 +352,11 @@ export const sportsData = [
     ],
     teamSize: 'Individual',
     format: 'Knockout',
-    registerLink: 'https://forms.google.com/fifa',
-    rulesLink: 'https://example.com/athletics-rules.pdf'
+    registrations: [
+      { label: 'Singles', link: 'https://forms.gle/zWbCpL6gjzY8Hcq1A' },
+      { label: 'Doubles', link: 'https://forms.gle/7XfEFfptUpHc658u6' }
+    ],
+    // rulesLink: 'https://example.com/athletics-rules.pdf'
   },
 
   {
@@ -335,8 +374,10 @@ export const sportsData = [
     ],
     teamSize: '5 players',
     format: 'Knockout',
-    registerLink: 'https://forms.google.com/codm',
-    rulesLink: 'https://example.com/athletics-rules.pdf'
+    registrations: [
+      { label: 'Register Here', link: 'https://forms.gle/i5yqCsUw4QkFL8My7' }
+    ],
+    // rulesLink: 'https://example.com/athletics-rules.pdf'
   },
 
   {
@@ -354,8 +395,10 @@ export const sportsData = [
     ],
     teamSize: '5 players',
     format: 'Knockout',
-    registerLink: 'https://forms.google.com/valorant',
-    rulesLink: 'https://example.com/athletics-rules.pdf'
+    registrations: [
+      { label: 'Register Here', link: 'https://forms.gle/CxLUT4R7YtTwP77E8' }
+    ],
+    // rulesLink: 'https://example.com/athletics-rules.pdf'
   },
 
   {
@@ -373,7 +416,9 @@ export const sportsData = [
     ],
     teamSize: '4 players',
     format: 'League',
-    registerLink: 'https://forms.google.com/bgmi',
-    rulesLink: 'https://example.com/athletics-rules.pdf'
+    registrations: [
+      { label: 'Register Here', link: 'https://forms.gle/5iw2E1cB5qCsxifA7' }
+    ],
+    // rulesLink: 'https://example.com/athletics-rules.pdf'
   }
 ];

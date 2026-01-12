@@ -100,6 +100,15 @@ export const teamData = {
       email: 'Haneesh.Bandi@iiitb.ac.in',
       photo: 'images/Team/Haneesh.png',
       instagram: 'https://instagram.com/_haneesh.reddy_'
+    },
+    {
+      id: 12,
+      name: 'Prabhas',
+      role: 'Organizing Committee Member',
+      contact: '9494676848',
+      email: 'jupalli.jaswant@iiitb.ac.in',
+      photo: 'images/Team/prabhas.jpeg',
+      instagram: 'https://instagram.com/_.prabhas._pvt'
     }
   ],
   webTeam: [

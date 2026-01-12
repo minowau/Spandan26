@@ -19,13 +19,13 @@ const Team = () => {
         </div>
 
         <div className="max-w-6xl mx-auto text-center relative z-10">
-          <Crown className="w-20 h-20 mx-auto mb-6 text-yellow-400 animate-bounce-slow" />
+          {/* <Crown className="w-20 h-20 mx-auto mb-6 text-yellow-400 animate-bounce-slow" /> */}
           <h1 className="text-6xl md:text-8xl font-extrabold mb-6 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent drop-shadow-2xl">
-            THE CHAMPIONS BEHIND THE GAMES
+            THE TEAM BEHIND SPANDAN
           </h1>
           <div className="w-32 h-1 bg-gradient-to-r from-yellow-400 to-red-500 mx-auto mb-6"></div>
           <p className="text-2xl md:text-3xl font-bold">
-            Meet the elite organizing committee of SPANDAN 2026
+            Meet the organizing committee of SPANDAN 2026
           </p>
         </div>
       </div>
@@ -145,7 +145,7 @@ const Team = () => {
                 <div className="text-center mb-16">
                   <Star className="w-16 h-16 mx-auto mb-6 text-green-400 animate-bounce-slow" />
                   <h2 className="text-5xl font-extrabold mb-4 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
-                    DIGITAL ARCHITECTS
+                    WEBSITE TEAM
                   </h2>
                   <div className="w-32 h-1 bg-gradient-to-r from-green-400 to-emerald-500 mx-auto"></div>
                 </div>

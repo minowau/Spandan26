@@ -171,11 +171,11 @@ const App = () => {
             </div>
 
             <div className="text-center md:text-left md:order-1">
-              <div className="mb-6 md:mb-8 flex justify-center md:justify-start gap-3 md:gap-4">
-                <Trophy className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-yellow-400 animate-bounce-slow" />
-                <Flame className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-orange-500 animate-float" />
-                <Star className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-blue-400 animate-bounce-slow" style={{ animationDelay: '1s' }} />
-              </div>
+                {/* <div className="mb-6 md:mb-8 flex justify-center md:justify-start gap-3 md:gap-4">
+                  <Trophy className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-yellow-400 animate-bounce-slow" />
+                  <Flame className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-orange-500 animate-float" />
+                  <Star className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-blue-400 animate-bounce-slow" style={{ animationDelay: '1s' }} />
+                </div> */}
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold mb-4 md:mb-6 animate-zoom-in bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent drop-shadow-2xl">
                 SPANDAN 2026

@@ -53,7 +53,6 @@ const Sports = () => {
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent drop-shadow-2xl break-words text-center">
-
             CHAMPIONSHIP EVENTS
           </h1>
           <div className="w-32 h-1 bg-gradient-to-r from-yellow-400 to-red-500 mx-auto mb-6"></div>
@@ -148,9 +147,9 @@ const Sports = () => {
                   className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl shadow-2xl overflow-hidden card-3d-hover border-2 border-gray-700 hover:border-yellow-400 transition-all animate-slide-up relative"
                 >
                   <div className="absolute top-0 right-0 p-4">
-                    <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${medalColors[index % medalColors.length]} flex items-center justify-center shadow-xl`}>
+                    {/* <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${medalColors[index % medalColors.length]} flex items-center justify-center shadow-xl`}>
                       <Trophy className="w-8 h-8 text-white" />
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="md:flex">
@@ -164,8 +163,6 @@ const Sports = () => {
                         alt={sport.name}
                         className="object-contain h-72 w-72 rounded-3xl shadow-2xl bg-white p-2 animate-float relative z-10"
                       />
-
-
                     </div>
 
                     <div className="md:w-2/3 p-8 md:p-12">
@@ -208,11 +205,12 @@ const Sports = () => {
                           {sport.rules.map((rule, ruleIndex) => (
                             <li
                               key={ruleIndex}
-                              className="flex items-start gap-3 text-gray-300"
+                              className="flex items-baseline gap-3 text-gray-300"
                             >
-                              <span className="text-yellow-400 font-black text-xl mt-1">▸</span>
+                              <span className="text-yellow-400 font-black text-xl">▸</span>
                               <span className="leading-relaxed">{rule}</span>
                             </li>
+
                           ))}
                         </ul>
                         {sport.rulesLink && (
@@ -227,16 +225,22 @@ const Sports = () => {
                         )}
                       </div>
 
-                      <a
-                        href={sport.registerLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-10 py-4 rounded-full font-black text-lg hover:scale-105 transition-all transform shadow-2xl"
-                      >
-                        <Trophy className="w-6 h-6" />
-                        REGISTER FOR GLORY
-                        <ExternalLink className="w-6 h-6" />
-                      </a>
+                      {/* ✅ REGISTRATION BUTTONS (supports multiple sub-events) */}
+                      <div className="flex flex-wrap gap-3">
+                        {sport.registrations.map((reg, regIndex) => (
+                          <a
+                            key={regIndex}
+                            href={reg.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-10 py-4 rounded-full font-black text-lg hover:scale-105 transition-all transform shadow-2xl"
+                          >
+                            <Trophy className="w-6 h-6" />
+                            {reg.label}
+                            <ExternalLink className="w-6 h-6" />
+                          </a>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -244,27 +248,6 @@ const Sports = () => {
             </div>
           </div>
         </div>
-
-        {/* Footer CTA */}
-        {/* <div className="mt-20 relative overflow-hidden rounded-3xl">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-yellow-600 to-red-600 opacity-90"></div>
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-64 h-64 bg-white rounded-full opacity-10 blur-3xl"></div>
-            <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-white rounded-full opacity-10 blur-3xl"></div>
-          </div>
-          <div className="relative z-10 p-12 text-white text-center">
-            <Trophy className="w-20 h-20 mx-auto mb-6 text-yellow-300" />
-            <h2 className="text-4xl md:text-5xl font-black mb-6">
-              ARE YOU READY TO BECOME A CHAMPION?
-            </h2>
-            <p className="text-2xl mb-8 font-bold">
-              Register for your discipline and write your legacy at SPANDAN 2026
-            </p>
-            <p className="text-lg opacity-90 font-semibold">
-              Questions? Contact the Sports Secretary at sports@iiitb.ac.in
-            </p>
-          </div>
-        </div> */}
       </div>
     </div>
   );
