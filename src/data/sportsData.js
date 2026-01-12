@@ -58,7 +58,7 @@ export const sportsData = [
     ],
     teamSize: 'Singles / Doubles',
     format: 'Knockout',
-    gif_image: 'images/Sports/Badminton.png',
+    gif_image: 'images/Gifs/Badminton.gif',
     registerLink: 'https://forms.google.com/badminton',
     rulesLink: 'https://example.com/athletics-rules.pdf'
   },
@@ -286,7 +286,7 @@ export const sportsData = [
     id: 'smash-karts',
     name: 'Smash Karts',
     category: 'esports',
-    image: 'images/Sports/Esports/SmashKarts2.png',
+    image: 'images/Sports/Esports/SmashKarts.png',
     description: 'Fast-paced kart combat game with multiplayer battles.',
     rules: [
       'Solo participation',
