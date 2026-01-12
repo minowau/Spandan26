@@ -8,7 +8,7 @@ export const teamData = {
       role: 'Sports Secretary',
       contact: '8824119467',
       email: 'Bharat.Kumar@iiitb.ac.in',
-      photo: '/images/Team/Bharat Kumar.JPG',
+      photo: '/images/Team/Bharat Kumar.jpg',
       instagram: 'https://instagram.com/bharatkumar_dd'
     },
     {
@@ -64,6 +64,42 @@ export const teamData = {
       email: 'vini.rajput@iiitb.ac.in',
       photo: '/images/Team/Vinnie.jpeg',
       instagram: 'https://instagram.com/vinisingh_'
+    },
+    {
+      id: 8,
+      name: 'Shashank Pai',
+      role: 'Organizing Committee Member',
+      contact: '7338177339',
+      email: 'Shashank.Pai@iiitb.ac.in',
+      photo: 'images/Team/Sasank.JPG',
+      instagram: 'https://instagram.com/_shashankpai'
+    },
+    {
+      id: 9,
+      name: 'Gaurav R Nayak',
+      role: 'Organizing Committee Member',
+      contact: '9481275264',
+      email: 'Gaurav.nayak@iiitb.ac.in',
+      photo: 'images/Team/Gourav.jpg',
+      instagram: 'https://instagram.com/grn_7_'
+    },
+    {
+      id: 10,
+      name: 'Anirudh Rao',
+      role: 'Organizing Committee Member',
+      contact: '9945803885',
+      email: 'anirudh.rao@iiitb.ac.in',
+      photo: 'images/Team/Anirudh.jpg',
+      instagram: 'https://instagram.com/anirudhrao'
+    },
+    {
+      id: 11,
+      name: 'Haneesh Reddy',
+      role: 'Organizing Committee Member',
+      contact: '8367549999',
+      email: 'Haneesh.Bandi@iiitb.ac.in',
+      photo: 'images/Team/Haneesh.png',
+      instagram: 'https://instagram.com/_haneesh.reddy_'
     }
   ],
   webTeam: [
