@@ -15,6 +15,7 @@ export const sportsData = [
       'Referee decisions are final'
     ],
     teamSize: '5 players',
+    spocDetails: 'Javali,Veer',
     format: 'League + Knockout',
     gif_image: 'images/Gifs/Basketball.gif',
     registrations: [
@@ -213,7 +214,7 @@ export const sportsData = [
     id: 'gully-cricket',
     name: 'Gully Cricket',
     category: 'minor',
-    image: 'images/Sports/GullyCricket.png',
+    image: 'images/Sports/GullyCricket.jpg',
     description: 'Street-style cricket with simplified rules and high energy.',
     rules: [
       'Smaller teams',
@@ -276,7 +277,7 @@ export const sportsData = [
     id: 'pentathlon',
     name: 'Pentathlon (Gym)',
     category: 'minor',
-    image: 'images/IIITB_Logo.png',
+    image: 'images/Sports/Pentathlon.jpg',
     description: 'Multi-discipline fitness challenge testing overall athletic ability.',
     rules: [
       'Five fitness events',
