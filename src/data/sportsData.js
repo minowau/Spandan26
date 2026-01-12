@@ -1,11 +1,13 @@
 export const sportsData = [
   /* ===================== MAJOR SPORTS ===================== */
 
+  
+
   {
     id: 'basketball',
     name: 'Basketball',
     category: 'major',
-    image: 'images/IIITB_Logo.png',
+    image: 'images/Sports/BasketBall.webp',
     description: 'Fast-paced basketball matches showcasing teamwork, agility, and shooting precision.',
     rules: [
       'Team size: 5 players + substitutes',
@@ -25,7 +27,7 @@ export const sportsData = [
     id: 'volleyball',
     name: 'Volleyball',
     category: 'major',
-    image: 'images/IIITB_Logo.png',
+    image: 'images/Sports/VolleyBall.avif',
     description: 'Competitive volleyball games showcasing teamwork and athleticism.',
     rules: [
       'Team size: 6 players',
@@ -45,7 +47,7 @@ export const sportsData = [
     id: 'badminton',
     name: 'Badminton',
     category: 'major',
-    image: 'images/IIITB_Logo.png',
+    image: 'images/Sports/Badminton.png',
     description: 'High-intensity badminton matches testing speed, reflexes, and stamina.',
     rules: [
       'Singles and Doubles categories',
@@ -56,7 +58,7 @@ export const sportsData = [
     ],
     teamSize: 'Singles / Doubles',
     format: 'Knockout',
-    gif_image: 'images/Gifs/Badminton.gif',
+    gif_image: 'images/Sports/Badminton.png',
     registerLink: 'https://forms.google.com/badminton',
     rulesLink: 'https://example.com/athletics-rules.pdf'
   },
@@ -65,7 +67,7 @@ export const sportsData = [
     id: 'cricket',
     name: 'Cricket',
     category: 'major',
-    image: 'images/IIITB_Logo.png',
+    image: 'images/Sports/Cricket.png',
     description: 'Action-packed cricket tournament highlighting batting, bowling, and fielding skills.',
     rules: [
       'Team size: 11 players + substitutes',
@@ -85,7 +87,7 @@ export const sportsData = [
     id: 'table-tennis',
     name: 'Table Tennis',
     category: 'major',
-    image: 'images/IIITB_Logo.png',
+    image: 'images/Sports/TableTennis.png',
     description: 'Fast reflexes and sharp spins define this table tennis championship.',
     rules: [
       'Singles and Doubles categories',
@@ -106,7 +108,7 @@ export const sportsData = [
     id: 'football',
     name: 'Football',
     category: 'major',
-    image: 'images/IIITB_Logo.png',
+    image: 'images/Sports/FootBall.png',
     description: 'Competitive football matches emphasizing teamwork, tactics, and endurance.',
     rules: [
       'Team size: 7 players + substitutes',
@@ -126,7 +128,7 @@ export const sportsData = [
     id: 'chess',
     name: 'Chess',
     category: 'major',
-    image: 'images/IIITB_Logo.png',
+    image: 'images/Sports/Chess.jpg',
     description: 'A battle of strategy and intellect on the chessboard.',
     rules: [
       'Individual participation only',
@@ -146,7 +148,7 @@ export const sportsData = [
     id: 'tennis',
     name: 'Tennis',
     category: 'major',
-    image: 'images/IIITB_Logo.png',
+    image: 'images/Sports/Tennis.png',
     description: 'Singles tennis tournament focusing on technique, stamina, and consistency.',
     rules: [
       'Singles matches only',
@@ -165,7 +167,7 @@ export const sportsData = [
     id: 'throwball',
     name: 'Throwball',
     category: 'major',
-    image: 'images/IIITB_Logo.png',
+    image: 'images/Sports/ThrowBall.png',
     description: 'Team-based throwball matches focusing on coordination and quick reflexes.',
     rules: [
       'Team size: 7 players',
@@ -187,7 +189,7 @@ export const sportsData = [
     id: 'gully-cricket',
     name: 'Gully Cricket',
     category: 'minor',
-    image: 'images/IIITB_Logo.png',
+    image: 'images/Sports/GullyCricket.png',
     description: 'Street-style cricket with simplified rules and high energy.',
     rules: [
       'Smaller teams',
@@ -206,7 +208,7 @@ export const sportsData = [
     id: 'carrom',
     name: 'Carrom',
     category: 'minor',
-    image: 'images/IIITB_Logo.png',
+    image: 'images/Sports/Carroms.png',
     description: 'Precision-based indoor board game competition.',
     rules: [
       'Singles matches',
@@ -225,7 +227,7 @@ export const sportsData = [
     id: 'tug-of-war',
     name: 'Tug of War (Gym)',
     category: 'minor',
-    image: 'images/IIITB_Logo.png',
+    image: 'images/Sports/TugOfWar.png',
     description: 'Strength-based team competition testing coordination and power.',
     rules: [
       'Fixed team size',
@@ -265,7 +267,7 @@ export const sportsData = [
     id: 'clash-royale',
     name: 'Clash Royale',
     category: 'esports',
-    image: 'images/IIITB_Logo.png',
+    image: 'images/Sports/Esports/CLashRoyale.jpeg',
     description: 'Real-time strategy battles in Clash Royale.',
     rules: [
       '1v1 matches',
@@ -284,7 +286,7 @@ export const sportsData = [
     id: 'smash-karts',
     name: 'Smash Karts',
     category: 'esports',
-    image: 'images/IIITB_Logo.png',
+    image: 'images/Sports/Esports/SmashKarts2.png',
     description: 'Fast-paced kart combat game with multiplayer battles.',
     rules: [
       'Solo participation',
@@ -303,7 +305,7 @@ export const sportsData = [
     id: 'fifa',
     name: 'FIFA',
     category: 'esports',
-    image: 'images/IIITB_Logo.png',
+    image: 'images/Sports/Esports/Fifa.png',
     description: 'Competitive FIFA matches showcasing football gaming skills.',
     rules: [
       '1v1 matches',
@@ -322,7 +324,7 @@ export const sportsData = [
     id: 'codm',
     name: 'CODM',
     category: 'esports',
-    image: 'images/IIITB_Logo.png',
+    image: 'images/Sports/Esports/CODM.jpg',
     description: 'Call of Duty Mobile competitive multiplayer battles.',
     rules: [
       '5v5 team format',
@@ -341,7 +343,7 @@ export const sportsData = [
     id: 'valorant',
     name: 'Valorant',
     category: 'esports',
-    image: 'images/IIITB_Logo.png',
+    image: 'images/Sports/Esports/Valorant.png',
     description: 'Tactical FPS esports tournament.',
     rules: [
       '5v5 matches',
@@ -360,7 +362,7 @@ export const sportsData = [
     id: 'bgmi',
     name: 'BGMI',
     category: 'esports',
-    image: 'images/IIITB_Logo.png',
+    image: 'images/Sports/Esports/BGMI.webp',
     description: 'Battle royale esports competition.',
     rules: [
       'Squad format',

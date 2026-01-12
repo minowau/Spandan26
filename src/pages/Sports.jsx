@@ -162,8 +162,10 @@ const Sports = () => {
                       <img
                         src={sport.image}
                         alt={sport.name}
-                        className="object-contain h-48 w-48 rounded-2xl shadow-2xl bg-white p-4 animate-float relative z-10"
+                        className="object-contain h-72 w-72 rounded-3xl shadow-2xl bg-white p-2 animate-float relative z-10"
                       />
+
+
                     </div>
 
                     <div className="md:w-2/3 p-8 md:p-12">
