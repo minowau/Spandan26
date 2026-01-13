@@ -8,14 +8,12 @@ export const sportsData = [
     image: 'images/Sports/BasketBall.webp',
     description: 'Fast-paced basketball matches showcasing teamwork, agility, and shooting precision.',
     rules: [
-      'Team size: 5 players + substitutes',
-      'Match duration: 4 quarters of 10 minutes',
       'Standard FIBA rules apply',
       'Fouls and free throws strictly enforced',
       'Referee decisions are final'
     ],
-    teamSize: '5 players',
-    spocDetails: 'Javali,Veer',
+    teamSize: '3 or 5 players',
+    spocDetails: 'Javali,Veer\n    9986523456,9986523456',
     format: 'League + Knockout',
     gif_image: 'images/Gifs/Basketball.gif',
     registrations: [
@@ -33,10 +31,10 @@ export const sportsData = [
     image: 'images/Sports/VolleyBall.avif',
     description: 'Competitive volleyball games showcasing teamwork and athleticism.',
     rules: [
-      'Team size: 6 players',
+      'Maximum team size: 8 players',
       'Best of 3 sets',
       '25 points per set',
-      'Rotation mandatory',
+      'Rotational serving system',
       'Standard volleyball rules apply'
     ],
     teamSize: '6 players',
@@ -56,7 +54,7 @@ export const sportsData = [
     description: 'High-intensity badminton matches testing speed, reflexes, and stamina.',
     rules: [
       'Singles and Doubles categories',
-      'Best of 3 games (21 points)',
+      'Best of 3 games(Can be chnaged based on time constraints)',
       'Knockout format',
       'Standard BWF rules apply',
       'Players must bring their own rackets'
@@ -81,13 +79,13 @@ export const sportsData = [
     image: 'images/Sports/Cricket.jpg',
     description: 'Action-packed cricket tournament highlighting batting, bowling, and fielding skills.',
     rules: [
-      'Team size: 11 players + substitutes',
+      'Team size: 11 players',
       'Match format: Limited overs',
       'League followed by knockouts',
       'Standard cricket rules apply',
       'Umpire decisions are final'
     ],
-    teamSize: '11 players',
+    teamSize: '10 players',
     format: 'League + Knockout',
     gif_image: 'images/Gifs/Cricket.gif',
     registrations: [
@@ -104,7 +102,7 @@ export const sportsData = [
     description: 'Fast reflexes and sharp spins define this table tennis championship.',
     rules: [
       'Singles and Doubles categories',
-      'Best of 5 games',
+      'Best of 3 games(Can be chnaged based on time constraints)',
       '11 points per game',
       'ITTF rules followed',
       'Knockout format'
