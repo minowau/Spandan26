@@ -13,7 +13,7 @@ export const sportsData = [
       'Referee decisions are final'
     ],
     teamSize: '3 or 5 players',
-    spocDetails: 'Javali,Veer\n    9986523456,9986523456',
+    spocDetails: 'Javali : 9986523456\nVeer : 9986523456',
     format: 'League + Knockout',
     gif_image: 'images/Gifs/Basketball.gif',
     registrations: [
