@@ -1,9 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import Home from '../pages/Home';
-import Sports from '../pages/Sports';
-import Team from '../pages/Team';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Sports from "./pages/Sports";
+import Team from "./pages/Team";
 
 function App() {
   return (
