@@ -13,7 +13,7 @@ export const sportsData = [
       'Referee decisions are final'
     ],
     teamSize: '3 or 5 players',
-    spocDetails: 'Javali : 9986523456\nVeer : 9986523456',
+    spocDetails:'Javali : 9986523456\nVeer : 9986523456',
     format: 'League + Knockout',
     gif_image: 'images/Gifs/Basketball.gif',
     registrations: [
@@ -37,7 +37,7 @@ export const sportsData = [
       'Rotational serving system',
       'Standard volleyball rules apply'
     ],
-    teamSize: '6 players',
+    teamSize: '6 + 2 substitutes',
     format: 'League + Knockout',
     gif_image: 'images/Gifs/Volleyball.gif',
     registrations: [
@@ -79,13 +79,13 @@ export const sportsData = [
     image: 'images/Sports/Cricket.jpg',
     description: 'Action-packed cricket tournament highlighting batting, bowling, and fielding skills.',
     rules: [
-      'Team size: 11 players',
+      'Team size: 12 players',
       'Match format: Limited overs',
       'League followed by knockouts',
       'Standard cricket rules apply',
       'Umpire decisions are final'
     ],
-    teamSize: '10 players',
+    teamSize: '10 + 2 substitutes',
     format: 'League + Knockout',
     gif_image: 'images/Gifs/Cricket.gif',
     registrations: [
@@ -127,13 +127,13 @@ export const sportsData = [
     image: 'images/Sports/FootBall.png',
     description: 'Competitive football matches emphasizing teamwork, tactics, and endurance.',
     rules: [
-      'Team size: 7 players + substitutes',
+      'Team size: 9 players',
       'Match duration: Two halves',
       'Knockout format',
       'Standard football rules apply',
       'Referee decisions are binding'
     ],
-    teamSize: '7 players',
+    teamSize: '6 + 3 substitutes',
     format: 'Knockout',
     gif_image: 'images/Gifs/Football.gif',
     registrations: [
@@ -151,7 +151,6 @@ export const sportsData = [
     rules: [
       'Individual participation only',
       'Time control decided by organizers',
-      'Swiss league format',
       'FIDE rules followed',
       'Fair play is mandatory'
     ],
@@ -170,13 +169,13 @@ export const sportsData = [
     image: 'images/Sports/Tennis.jpg',
     description: 'Singles tennis tournament focusing on technique, stamina, and consistency.',
     rules: [
-      'Singles matches only',
+      'Singles and Doubles categories',
       'Best of 3 sets format',
       'Standard tennis scoring',
       'Knockout tournament',
       'Players must bring racquets'
     ],
-    teamSize: 'Individual',
+    teamSize: 'Individual/Doubles',
     format: 'Knockout',
     registrations: [
       { label: 'Mens Singles', link: 'https://forms.gle/RtZ5Ef2CZ6eDwvj19' },
@@ -192,13 +191,13 @@ export const sportsData = [
     image: 'images/Sports/ThrowBall.jpg',
     description: 'Team-based throwball matches focusing on coordination and quick reflexes.',
     rules: [
-      'Team size: 7 players',
+      'Team size: 9 players',
       'Best of 3 sets',
       'Catch-and-throw rules apply',
       'No running with the ball',
       'Standard throwball rules followed'
     ],
-    teamSize: '7 players',
+    teamSize: '7 + 2 substitutes',
     format: 'League + Knockout',
     registrations: [
       { label: 'Register Here', link: 'https://forms.gle/83YBg7sniFbJizir6' }
@@ -221,7 +220,7 @@ export const sportsData = [
       'One pitch catch rules apply',
       'Umpire decision is final'
     ],
-    teamSize: '6 players',
+    teamSize: '5 + 1 substitute',
     format: 'Knockout',
     registrations: [
       { label: 'Register Here', link: 'https://forms.gle/Faht41q4Fdia11qa8' }
@@ -236,13 +235,12 @@ export const sportsData = [
     image: 'images/Sports/Carroms.jpg',
     description: 'Precision-based indoor board game competition.',
     rules: [
-      'Singles matches',
       'Knockout format',
       'Standard carrom rules',
       'Queen cover mandatory',
       'No foul tolerance'
     ],
-    teamSize: 'Individual',
+    teamSize: 'Individual/Doubles',
     format: 'Knockout',
     registrations: [
       { label: 'Register Here', link: 'https://forms.gle/2pu4HxzeJoE67UpN9' }
@@ -343,7 +341,7 @@ export const sportsData = [
     image: 'images/Sports/Esports/Fifa.png',
     description: 'Competitive FIFA matches showcasing football gaming skills.',
     rules: [
-      '1v1 matches',
+      '1v1 , 2V2 matches',
       'Standard match settings',
       'Knockout format',
       'No custom teams',
