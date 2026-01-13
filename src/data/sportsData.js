@@ -38,6 +38,7 @@ export const sportsData = [
       'Standard volleyball rules apply'
     ],
     teamSize: '6 + 2 substitutes',
+    spocDetails: 'Likith : 9986523456\nRishik : 9986523456',
     format: 'League + Knockout',
     gif_image: 'images/Gifs/Volleyball.gif',
     registrations: [
@@ -60,6 +61,7 @@ export const sportsData = [
       'Players must bring their own rackets'
     ],
     teamSize: 'Singles / Doubles',
+    spocDetails: 'Sandeep : 9986523456\nJashwant : 9986523456\nNamish : 9986523456',
     format: 'Knockout',
     gif_image: 'images/Gifs/Badminton.gif',
     registrations: [
@@ -86,6 +88,7 @@ export const sportsData = [
       'Umpire decisions are final'
     ],
     teamSize: '10 + 2 substitutes',
+    spocDetails: 'Swaraj : 9986523456\nVarshith Gowda : 9986523456',
     format: 'League + Knockout',
     gif_image: 'images/Gifs/Cricket.gif',
     registrations: [
@@ -108,6 +111,7 @@ export const sportsData = [
       'Knockout format'
     ],
     teamSize: 'Singles / Doubles',
+    spocDetails: 'Jayesh : 9986523456\nNaman : 9986523456',
     format: 'Knockout',
     gif_image: 'images/Gifs/TableTennis.gif',
     registrations: [
@@ -134,6 +138,7 @@ export const sportsData = [
       'Referee decisions are binding'
     ],
     teamSize: '6 + 3 substitutes',
+    spocDetails: 'Yashwanth : 9986523456\nSri Avneesh : 9986523456',
     format: 'Knockout',
     gif_image: 'images/Gifs/Football.gif',
     registrations: [
@@ -155,7 +160,8 @@ export const sportsData = [
       'Fair play is mandatory'
     ],
     teamSize: 'Individual',
-    format: 'Swiss League',
+    spocDetails: 'Anurag rao : 9986523456',
+    format: 'TBD based on entries',
     registrations: [
       { label: 'Register Here', link: 'https://forms.office.com/r/riT4guEyUP' }
     ],
@@ -176,6 +182,7 @@ export const sportsData = [
       'Players must bring racquets'
     ],
     teamSize: 'Individual/Doubles',
+    spocDetails: 'Arnav : 9986523456\nAmartya : 9986523456',
     format: 'Knockout',
     registrations: [
       { label: 'Mens Singles', link: 'https://forms.gle/RtZ5Ef2CZ6eDwvj19' },
@@ -198,6 +205,7 @@ export const sportsData = [
       'Standard throwball rules followed'
     ],
     teamSize: '7 + 2 substitutes',
+    spocDetails: 'Sakina : 9986523456\nTearth : 9986523456',
     format: 'League + Knockout',
     registrations: [
       { label: 'Register Here', link: 'https://forms.gle/83YBg7sniFbJizir6' }
@@ -221,6 +229,8 @@ export const sportsData = [
       'Umpire decision is final'
     ],
     teamSize: '5 + 1 substitute',
+    spocDetails: 'Manvith : 9986523456\nAmitash : 9986523456',
+    
     format: 'Knockout',
     registrations: [
       { label: 'Register Here', link: 'https://forms.gle/Faht41q4Fdia11qa8' }
@@ -241,6 +251,7 @@ export const sportsData = [
       'No foul tolerance'
     ],
     teamSize: 'Individual/Doubles',
+    spocDetails: 'Puttaraja V : 9986523456',
     format: 'Knockout',
     registrations: [
       { label: 'Register Here', link: 'https://forms.gle/2pu4HxzeJoE67UpN9' }
@@ -262,6 +273,7 @@ export const sportsData = [
       'Referee decision final'
     ],
     teamSize: 'Team',
+    spocDetails: 'Maadhav Patil : 9986523456',
     format: 'Knockout',
     registrations: [
       { label: 'Register Here', link: 'https://forms.gle/DkeoxBCcDbMxGMBn6' }
@@ -283,6 +295,7 @@ export const sportsData = [
       'Proper sportswear required'
     ],
     teamSize: 'Individual',
+    spocDetails: 'Maadhav Patil :9986523456',
     format: 'Points Based',
     registrations: [
       { label: 'Register Here', link: 'https://forms.gle/S8PYuDFbTEq4wS6p8' }
@@ -306,6 +319,7 @@ export const sportsData = [
       'Stable internet required'
     ],
     teamSize: 'Individual',
+    spocDetails: 'Kabir Ahuja : 9986523456',
     format: 'Knockout',
     registrations: [
       { label: 'Register Here', link: 'https://forms.gle/9ij6oaX1f8KnkpMa6' }
@@ -327,6 +341,7 @@ export const sportsData = [
       'Organizer rules apply'
     ],
     teamSize: 'Individual',
+    spocDetails: 'Revanth : 9986523456',
     format: 'League',
     registrations: [
       { label: 'Register Here', link: 'https://forms.gle/p4dnCZLJshSjhErPA' }
@@ -348,6 +363,7 @@ export const sportsData = [
       'Controller only'
     ],
     teamSize: 'Individual',
+    spocDetails: 'Muawiyah : 9986523456',
     format: 'Knockout',
     registrations: [
       { label: 'Singles', link: 'https://forms.gle/zWbCpL6gjzY8Hcq1A' },
@@ -370,6 +386,7 @@ export const sportsData = [
       'Anti-cheat enforced'
     ],
     teamSize: '5 players',
+    spocDetails: 'Hardhik : 9986523456',
     format: 'Knockout',
     registrations: [
       { label: 'Register Here', link: 'https://forms.gle/i5yqCsUw4QkFL8My7' }
@@ -390,7 +407,8 @@ export const sportsData = [
       'No cheats or exploits',
       'Admin decision final'
     ],
-    teamSize: '5 players',
+    teamSize: '5 players',  
+    spocDetails: 'Mohith Gupta :9986523456',
     format: 'Knockout',
     registrations: [
       { label: 'Register Here', link: 'https://forms.gle/CxLUT4R7YtTwP77E8' }
@@ -412,6 +430,7 @@ export const sportsData = [
       'Fair play mandatory'
     ],
     teamSize: '4 players',
+    spocDetails: 'Ansh :9986523456',
     format: 'League',
     registrations: [
       { label: 'Register Here', link: 'https://forms.gle/5iw2E1cB5qCsxifA7' }
