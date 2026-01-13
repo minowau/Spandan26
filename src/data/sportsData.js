@@ -12,7 +12,7 @@ export const sportsData = [
       'Fouls and free throws strictly enforced',
       'Referee decisions are final'
     ],
-    teamSize: '3 or 5 players',
+    teamSize: '3v3 : 3 + 1 substitute \n 5v5 : 5 + 7 substitutes',
     spocDetails:'Javali : 9986523456\nVeer : 9986523456',
     format: 'League + Knockout',
     gif_image: 'images/Gifs/Basketball.gif',
@@ -55,7 +55,7 @@ export const sportsData = [
     description: 'High-intensity badminton matches testing speed, reflexes, and stamina.',
     rules: [
       'Singles and Doubles categories',
-      'Best of 3 games(Can be chnaged based on time constraints)',
+      'Best of 3 games(Can be changed based on time constraints)',
       'Knockout format',
       'Standard BWF rules apply',
       'Players must bring their own rackets'
@@ -105,7 +105,7 @@ export const sportsData = [
     description: 'Fast reflexes and sharp spins define this table tennis championship.',
     rules: [
       'Singles and Doubles categories',
-      'Best of 3 games(Can be chnaged based on time constraints)',
+      'Best of 3 games(Can be changed based on time constraints)',
       '11 points per game',
       'ITTF rules followed',
       'Knockout format'
@@ -198,14 +198,14 @@ export const sportsData = [
     image: 'images/Sports/ThrowBall.jpg',
     description: 'Team-based throwball matches focusing on coordination and quick reflexes.',
     rules: [
-      'Team size: 9 players',
+      'Team size: 12 players',
       'Best of 3 sets',
       'Catch-and-throw rules apply',
       'No running with the ball',
       'Standard throwball rules followed'
     ],
-    teamSize: '7 + 2 substitutes',
-    spocDetails: 'Sakina : 9986523456\nTearth : 9986523456',
+    teamSize: '7 + 5 substitutes',
+    spocDetails: 'Sakina : 9986523456\nTirth : 9986523456',
     format: 'League + Knockout',
     registrations: [
       { label: 'Register Here', link: 'https://forms.gle/83YBg7sniFbJizir6' }
@@ -222,8 +222,7 @@ export const sportsData = [
     image: 'images/Sports/GullyCricket.jpg',
     description: 'Street-style cricket with simplified rules and high energy.',
     rules: [
-      'Smaller teams',
-      'Limited overs',
+      'minimum 1 girl player mandatory',
       'No hard ball',
       'One pitch catch rules apply',
       'Umpire decision is final'
@@ -251,7 +250,7 @@ export const sportsData = [
       'No foul tolerance'
     ],
     teamSize: 'Individual/Doubles',
-    spocDetails: 'Puttaraja V : 9986523456',
+    spocDetails: 'Puttaraja B : 9986523456',
     format: 'Knockout',
     registrations: [
       { label: 'Register Here', link: 'https://forms.gle/2pu4HxzeJoE67UpN9' }
@@ -272,7 +271,7 @@ export const sportsData = [
       'Footwear mandatory',
       'Referee decision final'
     ],
-    teamSize: 'Team',
+    teamSize: '5 + 3 substitutes',
     spocDetails: 'Maadhav Patil : 9986523456',
     format: 'Knockout',
     registrations: [
@@ -334,7 +333,7 @@ export const sportsData = [
     image: 'images/Sports/Esports/SmashKarts.png',
     description: 'Fast-paced kart combat game with multiplayer battles.',
     rules: [
-      'Solo participation',
+      'Format decided based on registrations',
       'Multiple rounds',
       'Points-based ranking',
       'No external mods',
