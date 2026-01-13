@@ -192,7 +192,9 @@ const Sports = () => {
                             </div>
                             <h3 className="font-black text-xl text-yellow-400">SPOC DETAILS</h3>
                           </div>
-                          <p className="text-white text-lg font-bold">{sport.spocDetails || 'To be announced'}</p>
+                          <p className="text-white text-lg font-bold whitespace-pre-line">
+                            {sport.spocDetails || 'To be announced'}
+                          </p>
                         </div>
                       </div>
 

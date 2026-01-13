@@ -12,8 +12,8 @@ export const sportsData = [
       'Fouls and free throws strictly enforced',
       'Referee decisions are final'
     ],
-    teamSize: '3 or 5 players On Court',
-    spocDetails: 'Javali,Veer\n    9986523456,9986523456',
+    teamSize: '3 or 5 players',
+    spocDetails:'Javali : 9986523456\nVeer : 9986523456',
     format: 'League + Knockout',
     gif_image: 'images/Gifs/Basketball.gif',
     registrations: [
@@ -137,7 +137,7 @@ export const sportsData = [
     format: 'Knockout',
     gif_image: 'images/Gifs/Football.gif',
     registrations: [
-      { label: 'Register Here', link: 'https://forms.google.com/football' }
+      { label: 'Register Here', link: 'https://forms.gle/H3pwor28zYER23sQA' }
     ],
     // rulesLink: 'https://example.com/athletics-rules.pdf'
   },
@@ -200,7 +200,7 @@ export const sportsData = [
     teamSize: '7 + 2 substitutes',
     format: 'League + Knockout',
     registrations: [
-      { label: 'Register Here', link: 'https://forms.google.com/throwball' }
+      { label: 'Register Here', link: 'https://forms.gle/83YBg7sniFbJizir6' }
     ],
     // rulesLink: 'https://example.com/athletics-rules.pdf'
   },
