@@ -182,7 +182,7 @@ const Sports = () => {
                             </div>
                             <h3 className="font-black text-xl text-blue-400">TEAM SIZE</h3>
                           </div>
-                          <p className="text-white text-lg font-bold">{sport.teamSize}</p>
+                          <p className="text-white text-lg font-bold whitespace-pre-line">{sport.teamSize}</p>
                         </div>
 
                         <div className="bg-gray-700/30 rounded-xl p-6 border-2 border-yellow-500/30 hover:border-yellow-500 transition-all">
