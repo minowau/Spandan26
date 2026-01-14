@@ -248,7 +248,7 @@ export const sportsData = [
       'Queen cover mandatory',
       'No foul tolerance'
     ],
-    teamSize: 'Individual/Doubles',
+    teamSize: 'Doubles',
     spocDetails: 'Puttaraja B : 7975306931',
     format: 'Knockout',
     registrations: [
@@ -338,7 +338,7 @@ export const sportsData = [
       'No external mods',
       'Organizer rules apply'
     ],
-    teamSize: 'Individual',
+    teamSize: 'Team of 3',
     spocDetails: 'Revanth : 9059219192',
     format: 'League',
     registrations: [
