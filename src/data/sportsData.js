@@ -12,7 +12,7 @@ export const sportsData = [
       'Fouls and free throws strictly enforced',
       'Referee decisions are final'
     ],
-    teamSize: '3v3 : 3 + 1 substitute \n 5v5 : 5 + 7 substitutes',
+    teamSize: '3v3 : 3 + 1 substitute\n5v5 : 5 + 7 substitutes',
     spocDetails:'Javali : 8296563377\nVeer : 8618100779',
     format: 'League + Knockout',
     gif_image: 'images/Gifs/Basketball.gif',
